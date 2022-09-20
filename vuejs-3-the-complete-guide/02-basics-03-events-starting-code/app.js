@@ -7,6 +7,15 @@ const app = Vue.createApp({
       confirmedName: ''
     };
   },
+  computed: {
+    fullname() {
+      console.log('Running again...');
+      if (this.name === '') {
+        return '';
+      }
+      return this.name + ' ' + 'Schwarzmüller';
+    }
+  },
   methods: {
     add() {
       this.counter += this.unit;
