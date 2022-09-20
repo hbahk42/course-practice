@@ -1,19 +1,44 @@
 const app = Vue.createApp({
   data() {
     return {
-      counter: 10,
+      counter: 0,
       unit: 5,
       name: '',
-      confirmedName: ''
+      lastName: '',
+      // fullName: ''
     };
   },
+  watch: {
+    // name(value) {
+    //   if (value === '') {
+    //     this.fullName = '';
+    //   } else {
+    //     this.fullName = value + ' ' + this.lastName;
+    //   }
+    // },
+    // lastName(value) {
+    //   if (value === '') {
+    //     this.fullName = '';
+    //   } else {
+    //     this.fullName = this.name + ' ' + value;
+    //   }
+    // }
+    counter(value) {
+      if (value > 50) {
+        const that = this;
+        setTimeout(function () {
+          that.counter = 0;
+        }, 2000);
+      }
+    }
+  },
   computed: {
-    fullname() {
+    fullName() {
       console.log('Running again...');
-      if (this.name === '') {
+      if (this.name === '' || this.lastName === '') {
         return '';
       }
-      return this.name + ' ' + 'Schwarzmüller';
+      return this.name + ' ' + this.lastName;
     }
   },
   methods: {
@@ -23,19 +48,11 @@ const app = Vue.createApp({
     reduce() {
       this.counter -= this.unit;
     },
-    // setName(event) {
-    //   this.name = event.target.value;
-    // },
     submitForm(event) {
-      // event.preventDefault();
       alert('Submitted!');
-    },
-    confirmInput() {
-      this.confirmedName = this.name;
     },
     resetInput() {
       this.name = '';
-      this.confirmInput();
     }
   }
 });
