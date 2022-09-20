@@ -22,7 +22,9 @@
       <button v-on:click.right="reduce">Subtract {{ unit }}</button>
       <p v-once>Starting Counter: {{ counter }}</p>
       <p>Result: {{ counter }}</p>
-      <input type="text" v-on:input="setName($event, 'Suffix')" v-on:keyup.enter="confirmInput" />
+      <!-- <input type="text" v-bind:value="name" v-on:input="setName" v-on:keyup.enter="confirmInput" /> -->
+      <input type="text" v-model="name" v-on:keyup.enter="confirmInput" />
+      <button v-on:click="resetInput">Reset Input</button>
       <p>Your Name: {{ confirmedName }}</p>
       <!-- <form v-on:submit="submitForm"> -->
       <form v-on:submit.prevent="submitForm">
