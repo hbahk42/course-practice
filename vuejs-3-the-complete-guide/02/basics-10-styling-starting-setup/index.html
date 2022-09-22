@@ -17,9 +17,7 @@
       <h1>Vue Dynamic Styling</h1>
     </header>
     <section id="styling">
-      <div class="demo" id="box-a" :style="getStyle(0)" @click="clickBox"></div>
-      <div class="demo" id="box-b" :style="getStyle(1)" @click="clickBox"></div>
-      <div class="demo" id="box-c" :style="getStyle(2)" @click="clickBox"></div>
+      <div class="demo" v-for="n in 3" @click="selectBox"></div>
     </section>
   </body>
 </html>
