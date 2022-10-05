@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
 dist
+package-lock.json
 
 # local env files
 .env.local
@@ -20,10 +21,3 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
-09/cmp-adv-01-starting-setup/dist/favicon.ico
-09/cmp-adv-01-starting-setup/dist/index.html
-09/cmp-adv-01-starting-setup/dist/css/app.f7a5ebd3.css
-09/cmp-adv-01-starting-setup/dist/js/app.46d5f1fe.js
-09/cmp-adv-01-starting-setup/dist/js/app.46d5f1fe.js.map
-09/cmp-adv-01-starting-setup/dist/js/chunk-vendors.b84d452d.js
-09/cmp-adv-01-starting-setup/dist/js/chunk-vendors.b84d452d.js.map
